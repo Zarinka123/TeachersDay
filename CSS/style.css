@@ -36,12 +36,12 @@ header {
 li {
     display: inline;
     list-style-type: none;
+    padding: 40px;
 }
 
 a {
     cursor: pointer;
     color: #000;
-    padding: 40px;
     text-decoration: none;
     font-family: Roboto;
 }
@@ -282,20 +282,16 @@ figure.effect-text:hover p {
 footer{ 
   display: flex; 
   justify-content: space-around; 
-  align-items: center; 
-  padding: 5px 0; 
+  align-items: center;  
   color: #fff; 
   background-color: #1E5945; 
-  min-height:128px; 
+  min-height:120px; 
   margin:  auto; 
   height: auto; 
 } 
  
 .copy_infa{margin: auto 0;} 
 .socsety img{ 
-  height: 50px; 
+  height: 30px; 
   text-align: left;
 } 
-footer .socsety img { 
-  width: 10%; 
-}
