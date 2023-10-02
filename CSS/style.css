@@ -1,0 +1,301 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../FONTS/roboto/Roboto-Regular.ttf")
+}
+
+@font-face {
+    font-family: "Tenor Sans";
+    src: url("../FONTS/Tenor Sans/TenorSans-Regular.ttf")
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.logo {
+    margin-right: 200px;
+}
+
+body {
+    margin: 0;
+    font-size: 20px;
+    background-color: #e5f4ff;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 60px;
+    margin-top: 25px;
+    z-index: 999;
+    padding: 5px 0;
+}
+
+li {
+    display: inline;
+    list-style-type: none;
+}
+
+a {
+    cursor: pointer;
+    color: #000;
+    padding: 40px;
+    text-decoration: none;
+    font-family: Roboto;
+}
+
+a:hover {
+    color: #1E5945;
+}
+
+.text_june {
+    display: flex;;
+    margin: 0 15%;
+    text-align: justify;
+}
+
+h3 {
+    text-align: center;
+    font-family: Tenor Sans;
+}
+
+p {
+     font-family: Tenor Sans;
+     font-weight: 500;
+}
+
+section {
+    padding-bottom: 20px;
+    padding-top: 0px;
+    text-align: center;
+}
+
+
+
+.slide {
+    z-index: -999;
+  flex: none;
+  scroll-snap-align: start;
+  width: 100%;
+  text-align: center;
+}
+
+.container {
+    
+    margin-top: -95px;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  -webkit-overflow-scrolling: touch; /* для плавной прокрутки на мобильных устройствах */
+}
+
+.icon {
+    width: 30%;
+}
+
+
+
+
+
+
+
+
+
+.content {
+    max-width:100%;
+    text-align:left; 
+}
+
+.simple-ss {
+    z-index: -999;
+    width:100%;
+    height:1000px;
+    background-image:url("../MEDIA/Kori1.jpg");
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.content1 {
+    max-width:100%;
+    text-align:left; 
+}
+
+.simple-ss1 {
+    z-index: -999;
+    width:100%;
+    height:730px;
+    background-image:url("../MEDIA/Sheldon.jpg");
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+    0% {background-position:0 0;}
+    16.66% {background-position:0 0;}
+    33.32% {background-position:-100% 0;}
+    49.98% {background-position:-300% 0;}
+    66.64% {background-position:-400% 0;}
+    83.30% {background-position:-500% 0;}
+    100% {background-position:0 0;}
+}
+
+
+
+
+.section1 {
+    display: flex;
+    margin: 0 15%;
+}
+
+.clearfix:before, .clearfix:after { 
+    content: ''; 
+}
+.clearfix:after { 
+    clear: both; 
+}
+.text-one {
+     width: 500px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.text-one figure {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    overflow: hidden;
+    background: #527c82;
+    text-align: center;
+    cursor: pointer;
+}
+.text-one figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    opacity: 0.8;
+}
+.text-one figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.text-one figure figcaption::before,
+.text-one figure figcaption::after {
+    pointer-events: none;
+}
+.text-one figure figcaption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.text-one figure h3 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+.text-one figure h3 span {
+    font-weight: 800;
+}
+.text-one figure h3,
+.text-one figure p {
+    margin: 0;
+}
+.text-one figure p {
+    letter-spacing: 2px;
+    font-size: 60%;
+}
+
+/* Эффект при наведении */
+figure.effect-text {
+    background: #363b39;
+}
+figure.effect-text img {
+    width: -webkit-calc(100% + 20px);
+    width: calc(100% + 20px);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transform: scale(1.1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+figure.effect-text:hover img {
+    opacity: 0.4;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+figure.effect-text figcaption {
+    text-align: left;
+}
+figure.effect-text h3 {
+    position: relative;
+    overflow: hidden;
+    padding: 0.5em 0;
+}
+figure.effect-text h3::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    content: '';
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+}
+figure.effect-text:hover h3::after {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+figure.effect-text p {
+    padding: 1em 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+}
+figure.effect-text:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+
+footer{ 
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  padding: 5px 0; 
+  color: #fff; 
+  background-color: #1E5945; 
+  min-height:128px; 
+  margin:  auto; 
+  height: auto; 
+} 
+ 
+.copy_infa{margin: auto 0;} 
+.socsety img{ 
+  height: 50px; 
+  text-align: left;
+} 
+footer .socsety img { 
+  width: 10%; 
+}
